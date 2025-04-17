@@ -43,7 +43,8 @@
 /* Root Variables for Light & Dark Theme */
 :root {
     --primary-color: #6C47FF;         /* Purple accent */
-    --secondary-color: #00D1FF;       /* Soft cyan for highlights */
+    --secondary-color: #00D1FF;  
+    --tertiary-color: #8e72fc;        /* Soft cyan for highlights */
     --bg-color: #ffffff;              /* Light background */
     --text-color: #111111;            /* Default dark text */
     --subtext-color: #555555;
@@ -132,4 +133,17 @@
     color: var(--text-color);
     cursor: pointer;
   }
-    
+  .cta-button {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .cta-button:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .cta-button:active {
+    transform: scale(0.98);
+  }
+  

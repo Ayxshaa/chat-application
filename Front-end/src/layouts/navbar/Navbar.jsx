@@ -1,14 +1,15 @@
 import React from 'react';
 import { useTheme } from '../../context/ThemeContext/ThemeContext';
+import { Sun, Moon } from 'lucide-react';
 
 const Navbar = () => {
   const { darkMode, toggleDarkMode } = useTheme();
 
-  const navItems = ['Home', 'About', 'Services',  'FAQs'];
+  const navItems = ['Home', 'About', 'Services', 'FAQs'];
 
   return (
     <header className="w-full z-50 px-6 py-3 flex justify-center font-clash]">
-      <div className="w-full max-w-7xl flex justify-between items-center rounded-full bg-[var(--color-navbar-bg)] backdrop-blur-md border border-[var(--color-border)] px-6 py-2 shadow-lg">
+      <div className="w-full max-w-7xl flex justify-between items-center rounded-full bg-[var(--color-navbar-bg)] backdrop-blur-md dark:border-gray-600 px-6 py-2 shadow-lg">
         
         {/* Left: Logo */}
         <div className="font-bold text-lg tracking-wide select-none">
@@ -38,13 +39,13 @@ const Navbar = () => {
             className="w-10 h-10 flex items-center justify-center rounded-full border border-[var(--color-border)] hover:bg-[var(--color-hover)] transition"
             aria-label="Toggle Theme"
           >
-            {darkMode ? '🌞' : '🌙'}
+            {darkMode ? <Sun size={20} /> : <Moon size={20} />}
           </button>
 
           {/* Contact Button */}
           <a
             href="#contact"
-            className="rounded-full px-4 py-2 border border-[var(--color-border)] text-[var(--color-text)] hover:text-[var(--color-primary)] hover:border-[var(--color-primary)] transition"
+            className="rounded-full px-4 py-2 border border-[var(--color-border)] text-[var(--color-text)] hover:text-[var(--color-primary)] hover:border-[var(--color-primary)] transition "
           >
             Contact us
           </a>
@@ -55,3 +56,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
