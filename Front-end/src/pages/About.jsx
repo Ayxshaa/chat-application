@@ -33,21 +33,24 @@ const About = () => {
   const cards = [
     {
       title: "Context-Aware AI",
-      description: "Our engine suggests based on the emotional depth of your connections."
+      description: "Our engine suggests based on the emotional depth of your connections.",
+      glowColor: "rgb(130, 80, 190)"
     },
     {
       title: "Privacy First",
-      description: "Conversations stay yours — always private and secure."
+      description: "Conversations stay yours — always private and secure.",
+      glowColor: "rgb(100, 180, 220)"
     },
     {
       title: "Crafted for Everyone",
-      description: "Whether you're introverted or extroverted, our tools help you express better."
+      description: "Whether you're introverted or extroverted, our tools help you express better.",
+      glowColor: "rgb(150, 230, 190)"
     }
   ];
 
   return (
     <section className="relative min-h-screen px-6 py-16 flex flex-col justify-center items-center text-center bg-[var(--bg-color)] text-[var(--text-color)] transition-colors duration-300 overflow-hidden">
-      {/* Glowing Effect */}
+      {/* Main Glowing Effect */}
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.5 }}
@@ -62,7 +65,7 @@ const About = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="mb-6 px-4 py-1 rounded-full text-sm font-medium backdrop-blur-sm border border-white/20 dark:border-white/10 bg-white/10 text-white dark:text-white"
+          className="mb-6 px-4 py-1 rounded-full text-sm font-medium backdrop-blur-sm border-[var(--border-color-dark)] dark:border-white/10 bg-white/10 text-[var(--text-color)] "
         >
           📖 About Us
         </motion.div>
@@ -88,7 +91,7 @@ const About = () => {
           Our mission is to help you connect deeper through smart suggestions that truly reflect the nature of your bonds.
         </motion.p>
   
-        {/* Highlights */}
+        {/* Highlights with glowing cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-5xl">
           {cards.map((card, index) => (
             <motion.div
@@ -97,13 +100,34 @@ const About = () => {
               variants={cardVariants}
               initial="hidden"
               animate={isVisible ? "visible" : "hidden"}
-              whileHover={{ y: -10, transition: { duration: 0.3 } }}
-              className="p-6 rounded-xl bg-[var(--card-bg)] shadow-md transition-all duration-300 cursor-pointer"
+              whileHover={{ 
+                y: -10, 
+                boxShadow: `0 0 25px 5px ${card.glowColor}`,
+                transition: { duration: 0.3 } 
+              }}
+              className="relative p-6 rounded-xl bg-[var(--card-bg)] shadow-md transition-all duration-300 cursor-pointer overflow-hidden"
             >
-              <h3 className="text-xl font-semibold mb-2">{card.title}</h3>
-              <p className="text-[var(--subtext-color)]">
-                {card.description}
-              </p>
+              {/* Card Glow Effect */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ 
+                  opacity: [0.3, 0.2, 0.1], 
+                }}
+                transition={{ 
+                  duration: 3, 
+                  repeat: Infinity, 
+                  repeatType: "reverse"
+                }}
+                style={{ backgroundColor: card.glowColor }}
+                className="absolute inset-0 rounded-lg blur-xl opacity-10 z-0"
+              />
+              
+              <div className="relative z-10">
+                <h3 className="text-xl font-semibold mb-2">{card.title}</h3>
+                <p className="text-[var(--subtext-color)]">
+                  {card.description}
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>

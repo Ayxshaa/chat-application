@@ -14,7 +14,7 @@ const Navbar = () => {
         {/* Left: Logo */}
         <div className="font-bold text-lg tracking-wide select-none">
           <span className="text-[var(--color-text)]">A</span>
-          <span className="bg-gradient-to-r from-indigo-400 to-indigo-500 bg-clip-text text-transparent">4</span>
+          <span className="bg-gradient-to-r from-teal-400 to-teal-500 bg-clip-text text-transparent">4</span>
           <span className="text-[var(--color-text)]">Zone</span>
         </div>
 

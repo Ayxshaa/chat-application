@@ -50,7 +50,7 @@
     --subtext-color: #555555;
     --card-bg: #f1f1f1;
     --input-bg: #e9e9e9;
-    --border-color: #dddddd;
+    --border-color: #1a1919;
     --bubble-friend: #ebebeb;
     --bubble-you: #d2caff;
   }
@@ -63,7 +63,7 @@
     --subtext-color: #aaaaaa;
     --card-bg: #1a1a1d;
     --input-bg: #2c2c2e;
-    --border-color: #1a1919;
+    --border-color:  #dddddd;
     --bubble-friend: #1f1f22;
     --bubble-you: #6c47ff33;
   }

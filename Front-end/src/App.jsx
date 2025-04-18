@@ -3,6 +3,7 @@ import { ThemeProvider } from './context/ThemeContext/ThemeContext';
 import Navbar from './layouts/navbar/Navbar';
 import Hero from './pages/Hero';// <-- Import Hero
 import About from './pages/About';
+import Features from './components/common/Features';
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
         <Navbar />
         <Hero /> {/* <-- Add Hero here */}
         <About />
+        <Features />
       </div>
     </ThemeProvider>
   );
