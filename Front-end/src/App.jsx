@@ -4,6 +4,7 @@ import Navbar from './layouts/navbar/Navbar';
 import Hero from './pages/Hero';// <-- Import Hero
 import About from './pages/About';
 import Features from './components/common/Features';
+import Modes from './components/common/Modes';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Hero /> {/* <-- Add Hero here */}
         <About />
         <Features />
+        <Modes />
       </div>
     </ThemeProvider>
   );
