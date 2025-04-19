@@ -24,7 +24,9 @@ const Hero = () => {
   const goToRegister = () => {
     navigate('/register');
   };
-
+  const goToDemo = () =>{
+    navigate('/modes');
+  }
   return (
     <section
       ref={heroRef}
@@ -65,7 +67,7 @@ const Hero = () => {
           </Button>
         </div>
         <div className="cta-button-container">
-          <Button variant="secondary">
+          <Button variant="secondary" onClick={goToDemo}>
             Try Demo
           </Button>
         </div>

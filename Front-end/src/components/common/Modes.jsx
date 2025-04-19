@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useTheme } from '../../context/ThemeContext/ThemeContext';
-
+import { useNavigate } from 'react-router-dom'; // ✅ Import navigate
 const Modes = () => {
   const { darkMode } = useTheme();
   const [activeMode, setActiveMode] = useState(null); // Start with no active mode
-
+  const navigate = useNavigate(); 
   const modes = [
     {
       id: 'friend',
@@ -132,6 +132,20 @@ const Modes = () => {
             </div>
           );
         })}
+      </div>
+      <div className="flex justify-center gap-6 mt-10">
+        <button
+          onClick={() => navigate('/register')} // ✅ Go to register page
+          className="bg-purple-600 text-white px-5 py-2 rounded-md hover:bg-purple-700 transition-colors"
+        >
+          Sign Up
+        </button>
+        <button
+          onClick={() => navigate('/')} // ✅ Go back to home
+          className="bg-gray-300 text-gray-800 px-5 py-2 rounded-md hover:bg-gray-400 transition-colors"
+        >
+          Back to Home
+        </button>
       </div>
     </div>
   );

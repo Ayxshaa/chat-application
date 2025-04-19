@@ -10,6 +10,7 @@ const Features = React.lazy(() => import('./components/common/Features'));
 const Teams = React.lazy(() => import('./components/common/Teams'));
 const FAQ = React.lazy(() => import('./components/common/FAQ'));
 const Register = React.lazy(() => import('./pages/auth/Register'));
+const Modes = React.lazy(() => import('./components/common/Modes'));
 const Login = React.lazy(() => import('./pages/auth/Login'));
 
 // Home component that combines all the landing page sections
@@ -24,18 +25,22 @@ const Home = () => (
 );
 
 // Layout component to conditionally render Navbar and Footer
+// Layout component to conditionally render Navbar and Footer
 const Layout = ({ children }) => {
   const location = useLocation();
-  const isAuthPage = location.pathname === '/register' || location.pathname === '/login';
-  
+  const noLayoutPages = ['/register', '/login', '/modes']; // pages where you don't want Navbar/Footer
+
+  const hideLayout = noLayoutPages.includes(location.pathname);
+
   return (
     <>
-      {!isAuthPage && <Navbar />}
+      {!hideLayout && <Navbar />}
       {children}
-      {!isAuthPage && <Footer />}
+      {!hideLayout && <Footer />}
     </>
   );
 };
+
 
 const App = () => {
   return (
@@ -61,6 +66,12 @@ const App = () => {
                   <Login />
                 </Layout>
               } />
+              <Route path="/modes" element={
+                <Layout>
+                  <Modes/>
+                </Layout>
+              } />
+              
               
               {/* Add more routes here */}
               <Route path="*" element={<Navigate to="/" replace />} />
