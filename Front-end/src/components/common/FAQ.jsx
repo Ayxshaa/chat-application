@@ -12,38 +12,38 @@ const tabData = [
 const faqData = {
   general: [
     {
-      question: "Why don't scientists trust atoms?",
-      answer: "Because they make up everything!",
+      question: "What is this chat application used for",
+      answer: "This chat application is designed to help users communicate in real time through text messages, emojis, media sharing, and more. It can be used for personal, professional, or community-based conversations.",
     },
     {
-      question: "Why did the scarecrow win an award?",
-      answer: "Because he was outstanding in his field!",
+      question: "Do I need to create an account to use the app",
+      answer: "Yes, creating an account ensures secure communication and access to your chats across devices.",
     },
     {
-      question: "What do you get if you cross a snowman and a vampire?",
-      answer: "Frostbite.",
+      question: "What should I do if I forget my password?",
+      answer: "Click Forgot Password on the login screen and follow the instructions to reset it via email or SMS.",
     },
     {
-      question: "Why don't scientists trust atoms?",
-      answer: "Because they make up everything!",
+      question: "How do I block or report someone?",
+      answer: "Tap on the user's profile in the chat, then select Block or  Report to take appropriate action.",
     },
   ],
   tech: [
     {
-      question: "Why do programmers prefer dark mode?",
-      answer: "Because the light attracts bugs!",
+      question: " How does real-time messaging work?",
+      answer: "We use WebSockets (via libraries like Socket.IO) to establish a persistent connection between the client and server, enabling real-time two-way communication for instant message delivery.",
     },
     {
-      question: "How many programmers does it take to change a light bulb?",
-      answer: "None, that's a hardware problem.",
+      question: "Is the chat encrypted?",
+      answer: "Yes, we implement end-to-end encryption (E2EE) or TLS encryption depending on the use case. Messages are securely transmitted and stored.",
     },
     {
-      question: "Why did the developer go broke?",
-      answer: "Because he lost his domain in a bet!",
+      question: "How do you handle offline messaging and message queuing?",
+      answer: "If a user goes offline, messages are queued on the server and delivered as soon as the user reconnects. We use message brokers like Redis Pub/Sub or Kafka for reliable delivery.",
     },
     {
-      question: "Why did the programmer quit his job?",
-      answer: "Because he didn't get arrays!",
+      question: "How is user authentication managed?",
+      answer: "Authentication is handled using JWT tokens for stateless sessions or with secure third-party providers (Google, Facebook, Apple) via OAuth.",
     },
   ],
   random: [

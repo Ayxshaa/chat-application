@@ -133,16 +133,9 @@ const Footer = () => {
             <div className="order-first mb-8 space-y-4 md:mb-2 xl:order-last xl:col-span-1 xl:mb-0">
               <a href="/" className="block max-w-fit group">
                 <div className="inline-flex items-center space-x-2 transition-transform duration-300 transform group-hover:scale-105">
-                  <div className="relative overflow-hidden rounded-md h-10 w-10 flex items-center justify-center" style={{ backgroundColor: 'var(--card-bg)' }}>
-                    <img
-                      src="https://ui.metamorix.com/favicon.ico"
-                      className="h-8 w-8 transition-all duration-500 hover:rotate-12"
-                      alt="Metamorix Logo"
-                    />
-                  </div>
                   <p className="text-base">
-                    <span className="font-bold" style={{ color: 'var(--primary-color)' }}>Meta</span>
-                    <span style={{ color: 'var(--text-color)' }}>morix UI</span>
+                    <span className="font-bold" style={{ color: 'var(--primary-color)' }}>A4</span>
+                    <span style={{ color: 'var(--text-color)' }}>Zone</span>
                   </p>
                 </div>
               </a>
@@ -178,21 +171,14 @@ const Footer = () => {
                   <span className="sr-only">YouTube</span>
                   <YouTube className="size-4 transition-colors duration-300" style={{ color: 'var(--subtext-color)' }} />
                 </a>
-                <button
-                  onClick={toggleDarkMode}
-                  className="group rounded-full border p-2 transition-all duration-300 hover:scale-110"
-                  style={{ borderColor: 'var(--border-color)', backgroundColor: 'var(--card-bg)' }}
-                  aria-label="Toggle theme"
-                >
-                  {darkMode ? <Sun className="size-4" style={{ color: 'var(--secondary-color)' }} /> : <Moon className="size-4" style={{ color: 'var(--primary-color)' }} />}
-                </button>
+          
               </div>
             </div>
           </div>
           <hr className="border-0 h-px" style={{ backgroundColor: 'var(--border-color)', opacity: 0.3 }} />
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
             <p className="text-sm" style={{ color: 'var(--subtext-color)' }}>
-              © {new Date().getFullYear()} Metamorix consultancy, Inc.
+              © {new Date().getFullYear()} A4 Zone, Inc.
             </p>
             <p className="text-sm mt-2 sm:mt-0" style={{ color: 'var(--subtext-color)' }}>
               Designed with <span className="text-red-500 animate-pulse">♥</span> by the A4 Zone Team
