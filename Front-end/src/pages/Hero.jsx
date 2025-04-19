@@ -1,9 +1,11 @@
 import React, { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { gsap } from "gsap";
 import Button from "../components/ui/Button/Button";
 
 const Hero = () => {
   const heroRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -12,11 +14,16 @@ const Hero = () => {
       tl.from(".welcome-tag", { y: -30, opacity: 0 })
         .from(".headline", { scale: 0.9, opacity: 0 }, "<+0.2")
         .from(".subtext", { y: 30, opacity: 0 }, "<+0.2")
-        .from(".cta-button", { y: 20, opacity: 0, stagger: 0.15 }, "<+0.1");
+        .from(".cta-button-container", { y: 20, opacity: 0, stagger: 0.15 }, "<+0.1");
     }, heroRef);
 
     return () => ctx.revert();
   }, []);
+
+  // Navigate to register page when "Get Started" is clicked
+  const goToRegister = () => {
+    navigate('/register');
+  };
 
   return (
     <section
@@ -52,12 +59,16 @@ const Hero = () => {
 
       {/* CTA Buttons */}
       <div className="z-10 mt-8 flex flex-wrap gap-4 justify-center">
-        <Button className="cta-button" variant="primary">
-          Get Started
-        </Button>
-        <Button className="cta-button" variant="secondary">
-          Try Demo
-        </Button>
+        <div className="cta-button-container">
+          <Button variant="primary" onClick={goToRegister}>
+            Get Started
+          </Button>
+        </div>
+        <div className="cta-button-container">
+          <Button variant="secondary">
+            Try Demo
+          </Button>
+        </div>
       </div>
     </section>
   );
