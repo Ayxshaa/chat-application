@@ -223,7 +223,7 @@ export default function ContactPage() {
                 )}
               </span>
               <div className={`absolute top-0 left-0 w-full h-full opacity-0 group-hover:opacity-20 transition-opacity duration-300 ${
-                darkMode ? 'bg-[#00FFFF]' : 'bg-white'
+                darkMode ? 'bg-[#8e72fc]' : 'bg-white'
               }`}></div>
               <div className="absolute bottom-0 left-0 h-0 w-0 group-hover:h-full group-hover:w-full transition-all duration-500 origin-bottom-left transform -skew-x-12 bg-gradient-to-r from-transparent via-white to-transparent opacity-30"></div>
             </button>
@@ -236,7 +236,7 @@ export default function ContactPage() {
             <a
               href="tel:+1234567890"
               className={`font-medium transition-colors duration-300 ${
-                darkMode ? 'text-[#A974FF] hover:text-[#00FFFF]' : 'text-[#6C47FF] hover:text-[#8e72fc]'
+                darkMode ? 'text-[#A974FF] hover:text-[#8e72fc]' : 'text-[#6C47FF] hover:text-[#8e72fc]'
               } underline`}
             >
               Call us

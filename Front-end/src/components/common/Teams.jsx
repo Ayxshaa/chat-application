@@ -74,7 +74,7 @@ const Teams = () => {
                     href={member.github} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className={`transition-colors ${darkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-black'}`}
+                    className={`transition-colors ${darkMode ? 'text-indigo-400 hover:text-white' : 'text-indigo-600 hover:text-black'}`}
                   >
                     <Github size={20} />
                   </a>
@@ -82,7 +82,7 @@ const Teams = () => {
                     href={member.linkedin} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className={`transition-colors ${darkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-black'}`}
+                    className={`transition-colors ${darkMode ? 'text-indigo-400 hover:text-white' : 'text-indigo-600 hover:text-black'}`}
                   >
                     <Linkedin size={20} />
                   </a>

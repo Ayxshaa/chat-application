@@ -249,54 +249,12 @@ const Register = () => {
             <button
               onClick={() => navigate('/login')}
               className={`font-medium transition-colors duration-300 ${
-                darkMode ? 'text-[#A974FF] hover:text-[#00FFFF]' : 'text-[#6C47FF] hover:text-[#8e72fc]'
+                darkMode ? 'text-[#A974FF] hover:text-[#8e72fc]' : 'text-[#6C47FF] hover:text-[#8e72fc]'
               } underline`}
             >
               Sign in
             </button>
           </p>
-        </div>
-
-        <div className="mt-8 relative flex items-center">
-          <div className={`flex-grow border-t ${darkMode ? 'border-gray-700' : 'border-gray-300'}`}></div>
-          <span className={`px-4 text-sm ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>Or continue with</span>
-          <div className={`flex-grow border-t ${darkMode ? 'border-gray-700' : 'border-gray-300'}`}></div>
-        </div>
-
-        <div className="mt-6 space-y-4">
-          <motion.button
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            onClick={() => handleSocialLogin('Google')}
-            className={`w-full py-3 px-4 rounded-lg font-medium relative overflow-hidden group flex items-center justify-center gap-3 transition-all duration-300 ${
-              darkMode ? 'bg-[#2c2c2e] hover:bg-[#2c2c2e]/80' : 'bg-[#e9e9e9] hover:bg-[#e9e9e9]/80'
-            } ${
-              darkMode ? 'text-white' : 'text-[#111111]'
-            }`}
-          >
-            <GoogleIcon />
-            <span>Sign up with Google</span>
-            <div className={`absolute bottom-0 left-0 h-0.5 w-0 group-hover:w-full transition-all duration-500 ${
-              darkMode ? 'bg-[#A974FF]' : 'bg-[#6C47FF]'
-            }`}></div>
-          </motion.button>
-
-          <motion.button
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            onClick={() => handleSocialLogin('GitHub')}
-            className={`w-full py-3 px-4 rounded-lg font-medium relative overflow-hidden group flex items-center justify-center gap-3 transition-all duration-300 ${
-              darkMode ? 'bg-[#2c2c2e] hover:bg-[#2c2c2e]/80' : 'bg-[#e9e9e9] hover:bg-[#e9e9e9]/80'
-            } ${
-              darkMode ? 'text-white' : 'text-[#111111]'
-            }`}
-          >
-            <Github className="w-5 h-5" />
-            <span>Sign up with GitHub</span>
-            <div className={`absolute bottom-0 left-0 h-0.5 w-0 group-hover:w-full transition-all duration-500 ${
-              darkMode ? 'bg-[#A974FF]' : 'bg-[#6C47FF]'
-            }`}></div>
-          </motion.button>
         </div>
       </motion.div>
     </div>
