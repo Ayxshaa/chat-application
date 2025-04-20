@@ -12,6 +12,8 @@ const FAQ = React.lazy(() => import('./components/common/FAQ'));
 const Register = React.lazy(() => import('./pages/auth/Register'));
 const Modes = React.lazy(() => import('./components/common/Modes'));
 const Login = React.lazy(() => import('./pages/auth/Login'));
+// Import your contact page
+const ContactPage = React.lazy(() => import('./pages/contactPage/ContactPage'));
 
 // Home component that combines all the landing page sections
 const Home = () => (
@@ -25,10 +27,9 @@ const Home = () => (
 );
 
 // Layout component to conditionally render Navbar and Footer
-// Layout component to conditionally render Navbar and Footer
 const Layout = ({ children }) => {
   const location = useLocation();
-  const noLayoutPages = ['/register', '/login', '/modes']; // pages where you don't want Navbar/Footer
+  const noLayoutPages = ['/register', '/login', '/modes', '/contactpage']; // pages where you don't want Navbar/Footer
 
   const hideLayout = noLayoutPages.includes(location.pathname);
 
@@ -72,6 +73,12 @@ const App = () => {
                 </Layout>
               } />
               
+              {/* Add contact page route */}
+              <Route path="/contactpage" element={
+                <Layout>
+                  <ContactPage />
+                </Layout>
+              } />
               
               {/* Add more routes here */}
               <Route path="*" element={<Navigate to="/" replace />} />

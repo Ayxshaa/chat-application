@@ -1,12 +1,18 @@
 import React from 'react';
 import { useTheme } from '../../context/ThemeContext/ThemeContext';
 import { Sun, Moon } from 'lucide-react';
-
+import ContactPage from '../../pages/contactPage/ContactPage';
+import { useNavigate } from "react-router-dom";
+import Button from '../../components/ui/Button/Button';
 const Navbar = () => {
+    const navigate = useNavigate();
   const { darkMode, toggleDarkMode } = useTheme();
+  
 
   const navItems = ['Home', 'About', 'Services', 'FAQs'];
-
+  const goToContactPage = () => {
+    navigate('/contactpage');
+  };
   return (
     <header className="w-full z-50 px-6 py-3 flex justify-center font-clash]">
       <div className="w-full max-w-7xl flex justify-between items-center rounded-full bg-[var(--color-navbar-bg)] backdrop-blur-md dark:border-gray-600 px-6 py-2 shadow-lg">
@@ -43,12 +49,12 @@ const Navbar = () => {
           </button>
 
           {/* Contact Button */}
-          <a
-            href="#contact"
-            className="rounded-full px-4 py-2 border border-[var(--color-border)] text-[var(--color-text)] hover:text-[var(--color-primary)] hover:border-[var(--color-primary)] transition "
+          <Button variant="secondary" onClick={goToContactPage}
+            className="bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-hover)] transition duration-300 px-4 py-2 rounded-full"
+            aria-label="Contact Us"
           >
-            Contact us
-          </a>
+            Contact Us
+          </Button>
         </div>
       </div>
     </header>

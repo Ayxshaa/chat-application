@@ -7,33 +7,33 @@ const teamMembers = [
     id: 1,
     name: 'Aman Kumar',
     position: 'Backend Developer',
-    image: '/path/to/robert-fox.jpg',
-    github: 'https://github.com/robertfox',
-    linkedin: 'https://linkedin.com/in/robertfox'
+    image: '/images/Aman.jpeg',
+    github: 'https://github.com/Aman-1610',
+    linkedin: 'https://www.linkedin.com/in/aman-kumar-625420247/'
   },
   {
     id: 2,
     name: 'Ayesha Qureshi',
     position: 'Frontend Developer',
-    image: '/path/to/jenny-wilson.jpg',
-    github: 'https://github.com/jennywilson',
-    linkedin: 'https://linkedin.com/in/jennywilson'
+    image: '/images/Ayesha.jpeg',
+    github: 'https://github.com/Ayxshaa',
+    linkedin: 'https://www.linkedin.com/in/ayesha-qureshi-a67414344/'
   },
   {
     id: 3,
     name: 'Arunima Joshi',
     position: 'AI Developer',
     image: '/path/to/guy-hawkins.jpg',
-    github: 'https://github.com/guyhawkins',
+    github: 'https://github.com/ArunimaJoshi',
     linkedin: 'https://linkedin.com/in/guyhawkins'
   },
   {
     id: 4,
     name: 'Abhishek Rawat',
     position: 'UI/UX Designer',
-    image: '/path/to/esther-howard.jpg',
-    github: 'https://github.com/estherhoward',
-    linkedin: 'https://linkedin.com/in/estherhoward'
+    image: '/images/Rawat.jpeg',
+    github: 'https://github.com/84618',
+    linkedin: 'https://www.linkedin.com/in/abhishek-rawat-3867002a8/'
   }
 ];
 
