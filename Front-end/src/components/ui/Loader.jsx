@@ -122,7 +122,7 @@ export default function Loader({ onLoadingComplete }) {
           <span 
             style={{ 
               opacity: zoneOpacity,
-              transition: 'opacity 0.4s ease-out',
+              transition: 'opacity 0.4s ease-out',  
               marginLeft: '8px'
             }}
           >

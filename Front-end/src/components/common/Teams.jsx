@@ -23,7 +23,7 @@ const teamMembers = [
     id: 3,
     name: 'Arunima Joshi',
     position: 'AI Developer',
-    image: '/path/to/guy-hawkins.jpg',
+    image: '/images/Joshi.png',
     github: 'https://github.com/ArunimaJoshi',
     linkedin: 'https://linkedin.com/in/guyhawkins'
   },
